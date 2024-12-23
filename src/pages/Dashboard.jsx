@@ -5,13 +5,13 @@ import { MOCK_REPOSITORIES } from '../../mockData';
 
 const RepositoryItem = ({ item, isLast }) => (
   <div className={`flex flex-col p-4 gap-3 hover:bg-[#f5f5f5] ${!isLast ? 'border-b' : ''}`}>
-    <div className="flex gap-2 items-center">
+    <div className="flex gap-2 items-center font-medium text-[181d27]">
       <span>{item.title}</span>
       <span className="bg-[#EFF8FF] border border-[#B2DDFF] text-[#175cd3] text-primary text-xs px-2 font-normal rounded-full">
         {item.type}
       </span>
     </div>
-    <div className="flex gap-4 md:gap-8 text-sm font-light">
+    <div className="flex gap-4 md:gap-8 text-sm font-light items-center text-[#181d27]">
       <span className="flex items-center gap-2">
         {item.language}
         <span className="bg-[#1570EF] p-1 rounded-full"></span>
@@ -27,23 +27,23 @@ const RepositoryItem = ({ item, isLast }) => (
 
 const SearchInput = ({ onChange }) => (
   <label 
-  htmlFor="inputSearch" 
-  className="relative outline outline-1 outline-[#d5d7da] border-b border-[#f3f3f3] w-fit rounded-md flex gap-2 items-center px-2 py-2"
->
-  <Search className="w-4 h-4 stroke-2 text-gray-700" />
-  <input
-    id="inputSearch"
-    placeholder="Search Repositories"
-    onChange={onChange}
-    className="text-xs w-56 placeholder:text-gray-700 outline-none bg-transparent"
-  />
-</label>
+    htmlFor="inputSearch" 
+    className="relative outline outline-1 outline-[#d5d7da] border-b border-[#f3f3f3] w-full md:w-fit rounded-md flex gap-2 items-center px-2 py-2"
+  >
+    <Search className="w-4 h-4 stroke-2 text-gray-700" />
+    <input
+      id="inputSearch"
+      placeholder="Search Repositories"
+      onChange={onChange}
+      className="text-xs w-full md:w-56 placeholder:text-gray-700 outline-none bg-transparent"
+    />
+  </label>
 );
 
 const HeaderActions = () => (
-  <div className="flex gap-2">
+  <div className="flex gap-2 w-full md:w-auto">
      <button 
-      className="flex text-xs items-center p-2 px-4 gap-2 rounded-md text-gray-700 hover:bg-gray-50"
+      className="flex text-xs items-center p-2 px-4 gap-2 rounded-md text-gray-700 hover:bg-gray-50 flex-1 md:flex-none justify-center md:justify-start"
       style={{
         outline: '1px solid #d5d7da',
         border: 'none',
@@ -53,7 +53,7 @@ const HeaderActions = () => (
       <RefreshCw className="w-4 h-4" />
       Refresh All
     </button>
-    <button className="flex text-xs items-center p-2 px-4 gap-2 bg-[#1570EF] text-white rounded-md border-2 border-[#2E7FF1] outline-2 outline-[#2A6ECC]">
+    <button className="flex text-xs items-center p-2 px-4 gap-2 bg-[#1570EF] text-white rounded-md border-2 border-[#2E7FF1] outline-2 outline-[#2A6ECC] flex-1 md:flex-none justify-center md:justify-start">
       <Plus className="w-4 h-4" />
       Add Repository
     </button>
@@ -61,8 +61,8 @@ const HeaderActions = () => (
 );
 
 const RepositoryHeader = ({ totalRepositories, onSearchChange }) => (
-  <div className="flex flex-col gap-4 border-b p-4 bg-white rounded-t-xl">  
-    <div className="flex justify-between items-center flex-wrap gap-4">
+  <div className="flex flex-col gap-4 border-b p-4 bg-white md:rounded-t-xl">  
+    <div className="flex flex-col md:flex-row md:justify-between md:items-center gap-4">
       <div className="flex flex-col">
         <span className="font-semibold text-2xl text-gray-900">Repositories</span>
         <span className="text-sm text-gray-700">{totalRepositories} total repositories</span>
@@ -105,8 +105,8 @@ const Dashboard = () => {
 
   return (
     <Layout>
-      <div className="p-5">
-        <div className="bg-white w-full rounded-xl border flex flex-col">
+      <div className="p-0 md:p-5 h-screen md:h-auto">
+        <div className="bg-white w-full h-full md:h-auto md:rounded-xl md:border flex flex-col">
           <RepositoryHeader 
             totalRepositories={MOCK_REPOSITORIES.length} 
             onSearchChange={handleFilter} 
