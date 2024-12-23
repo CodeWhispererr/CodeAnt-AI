@@ -1,4 +1,4 @@
-# Project Name
+# Assignment
 Assignment
 
 ## Description
@@ -13,12 +13,12 @@ Before you begin, ensure you have the following installed:
 
 1. Clone the repository:
 ```bash
-git clone [your-repository-url]
+git clone https://github.com/CodeWhispererr/CodeAnt-AI.git
 ```
 
 2. Navigate to the project directory:
 ```bash
-cd [project-name]
+cd CodeAnt-AI
 ```
 
 3. Install dependencies:
