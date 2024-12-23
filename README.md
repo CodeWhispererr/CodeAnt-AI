@@ -2,7 +2,7 @@
 Assignment
 
 ## Description
-Assignment for a YC Baked startup.
+Assignment for a YC startup.
 
 ## Prerequisites
 Before you begin, ensure you have the following installed:
