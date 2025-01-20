@@ -210,6 +210,13 @@ export const MOCK_REPOSITORIES = [
       updatedAt: 'Updated 6 days ago'
     },
     {
+      title: 'daa-assignments',
+      type: 'Private',
+      language: 'C++',
+      size: '654 KB',
+      updatedAt: 'Updated 10 days ago'
+    },
+    {
       title: 'real-time-analytics',
       type: 'Private',
       language: 'Scala',
