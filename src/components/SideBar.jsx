@@ -26,6 +26,21 @@ const footerItems = [
   { icon: LogOut, label: 'Logout' }
 ];
 
+/**
+ * Renders a stylized button with an icon and label.
+ * @example
+ * renderButton({ icon: SomeIcon, label: 'Click Me', isActive: true, onClick: handleClick })
+ * // Returns a button element
+ * @param {object} icon - React component for the icon.
+ * @param {string} label - Text to display on the button.
+ * @param {boolean} isActive - Determines the styling of the button.
+ * @param {function} onClick - Function to call when button is clicked.
+ * @returns {JSX.Element} Styled button with an icon and label.
+ * @description
+ *   - Button appearance changes based on the isActive state.
+ *   - Includes a hover effect for inactive state.
+ *   - Encompasses a flexible container for icon and label.
+ */
 const NavItem = ({ icon: Icon, label, isActive, onClick }) => (
   <button
     onClick={onClick}
@@ -42,6 +57,20 @@ const NavItem = ({ icon: Icon, label, isActive, onClick }) => (
   </button>
 );
 
+/**
+ * Renders a sidebar component that adapts to screen size and user interactions.
+ * @example
+ * <SideBar />
+ * // Renders the sidebar element with responsive behavior
+ * @param {Array} navItems - An array of navigation items containing label and icon properties used to populate the sidebar.
+ * @param {Array} footerItems - An array of footer items containing label and icon properties to be displayed at the bottom of the sidebar.
+ * @returns {JSX.Element} A sidebar component with responsive design features and click handling to toggle visibility.
+ * @description
+ *   - Uses hooks like useState to manage the state of sidebar visibility, mobile view, and active item.
+ *   - Utilizes useEffect to add event listeners for window resize and outside clicks, ensuring responsive behavior.
+ *   - Ref hooks are used to keep track of sidebar and mobile status references.
+ *   - Implements conditional rendering to manage the sidebar's appearance based on screen size and user interaction.
+ */
 const SideBar = () => {
   const [isSideBarVisible, setIsSideBarVisible] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
