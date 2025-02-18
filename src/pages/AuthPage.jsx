@@ -9,6 +9,18 @@ import key from "../assets/imgs/key.png";
 import devops from "../assets/imgs/devops.png";
 import { AuthButton } from "../components/AuthButton";
 
+/**
+* Renders the authentication page with options for SAAS and Self-Hosted login methods.
+* @example
+* (sample_arg1, sample_arg2)
+* some sample return value
+* @returns {JSX.Element} JSX code for the authentication page component.
+* @description
+*   - Toggles between SAAS and Self-Hosted modes to display corresponding authentication methods.
+*   - Utilizes React hooks to manage state for authentication mode and button selection.
+*   - Incorporates responsive design with layout adjusting for mobile and desktop views.
+*   - Includes a privacy policy acknowledgement at the bottom of the page.
+*/
 const AuthPage = () => {
     const [authMode, setAuthMode] = useState("saas");
     const [isSelected, setIsSelected] = useState(true);
