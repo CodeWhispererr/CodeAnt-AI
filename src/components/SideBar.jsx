@@ -9,7 +9,7 @@ import {
   Phone,
   Menu,
   ChevronDown,
-  X
+  X,
 } from 'lucide-react';
 import anticon from '../assets/svgs/logo.svg';
 
@@ -18,12 +18,12 @@ const navItems = [
   { icon: Code2, label: 'AI Code Review' },
   { icon: Cloud, label: 'Cloud Security' },
   { icon: BookOpen, label: 'How to Use' },
-  { icon: Settings, label: 'Settings' }
+  { icon: Settings, label: 'Settings' },
 ];
 
 const footerItems = [
   { icon: Phone, label: 'Support' },
-  { icon: LogOut, label: 'Logout' }
+  { icon: LogOut, label: 'Logout' },
 ];
 
 /**
